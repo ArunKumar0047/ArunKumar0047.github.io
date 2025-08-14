@@ -4,7 +4,7 @@ SITEURL = ""
 
 PATH = "content"
 
-TIMEZONE = 'India/Kolkata'
+TIMEZONE = 'Europe/Rome'
 
 DEFAULT_LANG = 'en'
 
