@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Arunkumar M</title>
+    <link rel="stylesheet" href="https://arunkumar0047.github.io/theme/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <a href="https://arunkumar0047.github.io/" class="logo">Arunkumar M</a>
+                <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#blogs">Blogs</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    <li><button id="theme-toggle" class="theme-toggle">Light/Dark</button></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+<section id="contact" class="page-section standalone-page">
+    <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="section-content">
+            <ul>
+<li><strong>Email:</strong> <a href="mailto:mohandasarunkumar07@gmail.com">mohandasarunkumar07@gmail.com</a></li>
+<li><strong>Phone:</strong> +91 9786020894</li>
+<li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/arunkumar-mohandas/">linkedin.com/in/arunkumar-mohandas</a></li>
+<li><strong>Twitter:</strong> <a href="https://x.com/MasterofNonee__">x.com/MasterofNonee__</a></li>
+</ul>
+        </div>
+    </div>
+</section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Arunkumar</p>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            const themeToggle = document.getElementById('theme-toggle');
+            const body = document.body;
+
+            // Function to apply the saved theme
+            function applyTheme(theme) {
+                if (theme === 'dark') {
+                    body.classList.remove('light-theme');
+                    body.classList.add('dark-theme');
+                } else {
+                    body.classList.remove('dark-theme');
+                    body.classList.add('light-theme');
+                }
+            }
+
+            // On page load, check for a saved theme in localStorage
+            const savedTheme = localStorage.getItem('theme') || 'light'; // Default to light
+            applyTheme(savedTheme);
+
+            // Add click event listener to the toggle button
+            themeToggle.addEventListener('click', function() {
+                let newTheme = body.classList.contains('light-theme') ? 'dark' : 'light';
+                applyTheme(newTheme);
+                localStorage.setItem('theme', newTheme);
+            });
+        })();
+    </script>
+    <script src="https://arunkumar0047.github.io/theme/js/main.js"></script>
+</body>
+</html>

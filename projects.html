@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Arunkumar M</title>
+    <link rel="stylesheet" href="https://arunkumar0047.github.io/theme/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <a href="https://arunkumar0047.github.io/" class="logo">Arunkumar M</a>
+                <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#blogs">Blogs</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    <li><button id="theme-toggle" class="theme-toggle">Light/Dark</button></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+<section id="projects" class="page-section standalone-page">
+    <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="section-content">
+            <h3>Dynamic Web Interaction Agent | <a href="https://github.com/ArunKumar0047/AI_Web_Agent/tree/main/v1">Link</a></h3>
+<ul>
+<li>Built an AI web agent using LangChain, LangGraph, and Selenium that autonomously interacts with Google Forms
+by parsing user input and dynamically filling form fields.</li>
+<li>Developed custom tools to enable seamless navigation, input handling, and form submission, leveraging OpenAI
+models for intent extraction.</li>
+<li>Delivered a working system that demonstrates how multi-agent workflows can automate repetitive tasks like form
+filling, reducing manual effort and ensuring accurate data entry.</li>
+</ul>
+<h3>Multi-Agent Resume Processing  | <a href="https://github.com/ArunKumar0047/Resume_Parser_Agent">Link</a></h3>
+<ul>
+<li>Developed a multi-agent workflow using LangGraph and LangChain to automate resume processing, which reads
+multi-format files (PDF, DOCX), extracts key entities, and validates the data for accuracy.</li>
+<li>Engineered a streamlined pipeline with distinct agents for reading, extracting, and validating resume information,
+utilizing OpenAI models and a Streamlit UI for seamless user interaction and reliable data output.</li>
+<li>Architected an automated resume analysis system by creating a graph-based workflow with agents that parse
+various document types, extract crucial candidate information, and implement a validation step to ensure data
+integrity.</li>
+</ul>
+<h3>Personalized Movie Suggestions Platform | <a href="https://github.com/ArunKumar0047/ML_recommendation_system_and_webpage">Link</a></h3>
+<ul>
+<li>Engineered a content-based movie recommendation system by processing a large dataset with TF-IDF vectorization
+and calculating cosine similarity to provide users with personalized suggestions based on keywords.</li>
+<li>Developed a full-stack web application using Flask and MySQL that allows users to receive tailored movie
+recommendations, implementing a machine learning model to analyze and compare movie descriptions.</li>
+<li>Built and deployed an interactive movie recommendation platform featuring user authentication and a
+content-based filtering algorithm, resulting in a responsive and accurate suggestion engine for users.</li>
+</ul>
+        </div>
+    </div>
+</section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Arunkumar</p>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            const themeToggle = document.getElementById('theme-toggle');
+            const body = document.body;
+
+            // Function to apply the saved theme
+            function applyTheme(theme) {
+                if (theme === 'dark') {
+                    body.classList.remove('light-theme');
+                    body.classList.add('dark-theme');
+                } else {
+                    body.classList.remove('dark-theme');
+                    body.classList.add('light-theme');
+                }
+            }
+
+            // On page load, check for a saved theme in localStorage
+            const savedTheme = localStorage.getItem('theme') || 'light'; // Default to light
+            applyTheme(savedTheme);
+
+            // Add click event listener to the toggle button
+            themeToggle.addEventListener('click', function() {
+                let newTheme = body.classList.contains('light-theme') ? 'dark' : 'light';
+                applyTheme(newTheme);
+                localStorage.setItem('theme', newTheme);
+            });
+        })();
+    </script>
+    <script src="https://arunkumar0047.github.io/theme/js/main.js"></script>
+</body>
+</html>

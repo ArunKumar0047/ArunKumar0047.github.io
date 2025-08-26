@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Arunkumar M</title>
+    <link rel="stylesheet" href="https://arunkumar0047.github.io/theme/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <a href="https://arunkumar0047.github.io/" class="logo">Arunkumar M</a>
+                <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#blogs">Blogs</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    <li><button id="theme-toggle" class="theme-toggle">Light/Dark</button></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+<section id="about" class="page-section standalone-page">
+    <div class="container">
+        <h2 class="section-title">About</h2>
+        <div class="section-content">
+            <p>As a recent graduate in Artificial Intelligence and Data Science, I’ve gained hands-on experience through internships as a GenAI Intern and an AI and LLM Intern. I am particularly interested in building intelligent agents and creating
+multi-agent workflows, with strong skills in turning data into actionable insights. I am eager to leverage my practical
+experience to contribute to meaningful AI projects while continuing to learn and grow in a creative environment.</p>
+<h3>Skills</h3>
+<ul>
+<li><strong>Languages:</strong> Python, C/C++, SQL (Postgres)</li>
+<li><strong>Tools &amp; Platforms:</strong> Git, Docker, Tableau, Linux, FastAPI</li>
+<li><strong>Concepts:</strong> Machine Learning, Deep Learning, Generative AI, Agents, Prompt Engineering</li>
+</ul>
+        </div>
+    </div>
+</section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Arunkumar</p>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            const themeToggle = document.getElementById('theme-toggle');
+            const body = document.body;
+
+            // Function to apply the saved theme
+            function applyTheme(theme) {
+                if (theme === 'dark') {
+                    body.classList.remove('light-theme');
+                    body.classList.add('dark-theme');
+                } else {
+                    body.classList.remove('dark-theme');
+                    body.classList.add('light-theme');
+                }
+            }
+
+            // On page load, check for a saved theme in localStorage
+            const savedTheme = localStorage.getItem('theme') || 'light'; // Default to light
+            applyTheme(savedTheme);
+
+            // Add click event listener to the toggle button
+            themeToggle.addEventListener('click', function() {
+                let newTheme = body.classList.contains('light-theme') ? 'dark' : 'light';
+                applyTheme(newTheme);
+                localStorage.setItem('theme', newTheme);
+            });
+        })();
+    </script>
+    <script src="https://arunkumar0047.github.io/theme/js/main.js"></script>
+</body>
+</html>

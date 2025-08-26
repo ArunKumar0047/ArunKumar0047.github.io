@@ -1,0 +1,227 @@
+/* =================================
+   Base & Common Styles
+==================================== */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding-top: 70px; /* Space for fixed header */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s, border-bottom 0.3s;
+}
+
+header nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+}
+
+header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+header li a {
+    text-decoration: none;
+    padding: 15px;
+    transition: color 0.3s;
+}
+
+header li a:hover {
+    color: #007bff;
+}
+
+.page-section {
+    padding: 60px 0;
+    transition: border-bottom 0.3s;
+}
+
+.standalone-page {
+    padding-top: 100px;
+}
+
+.section-title {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 40px;
+    transition: color 0.3s;
+}
+
+.section-content p {
+    font-size: 1.1em;
+    margin-bottom: 1em;
+}
+
+.post-meta {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.show-more-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    transition: background-color 0.3s, color 0.3s, border-top 0.3s;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* =================================
+   Light Theme (Default)
+==================================== */
+
+body.light-theme {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.light-theme header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ccc;
+}
+
+.light-theme header li a {
+    color: #333;
+}
+
+.light-theme .page-section {
+    border-bottom: 1px solid #ccc;
+}
+
+.light-theme .section-title {
+    color: #111;
+}
+
+.light-theme .blog-summary {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.light-theme .blog-summary h3 a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.light-theme .post-meta {
+    color: #777;
+}
+
+.light-theme footer {
+    background-color: #ffffff;
+    color: #777;
+    border-top: 1px solid #ccc;
+}
+
+
+/* =================================
+   Dark Theme
+==================================== */
+
+body.dark-theme {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.dark-theme header {
+    background-color: #1f1f1f;
+    border-bottom: 1px solid #333;
+}
+
+.dark-theme header li a {
+    color: #e0e0e0;
+}
+
+.dark-theme .page-section {
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.dark-theme .section-title {
+    color: #ffffff;
+}
+
+.dark-theme .blog-summary {
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.dark-theme .blog-summary h3 a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.dark-theme .post-meta {
+    color: #888;
+}
+
+.dark-theme footer {
+    background-color: #1f1f1f;
+    color: #888;
+    border-top: 1px solid #333;
+}
+
+/* =================================
+   Theme Toggle Button
+==================================== */
+
+.theme-toggle {
+    background: none;
+    border: 1px solid #888;
+    color: #888;
+    border-radius: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 0.8em;
+    margin-left: 15px;
+}
+
