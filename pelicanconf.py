@@ -1,5 +1,4 @@
 import datetime
-import os
 
 AUTHOR = 'Arunkumar'
 SITENAME = 'Arunkumar M'
@@ -8,7 +7,7 @@ SITEURL = ''
 # Path to content, pages, and theme
 PATH = 'content'
 PAGE_PATHS = ['pages']
-THEME = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'theme')
+THEME = 'theme'
 
 TIMEZONE = 'Europe/Rome'
 DEFAULT_LANG = 'en'
