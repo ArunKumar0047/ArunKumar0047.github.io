@@ -41,4 +41,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./output
-          # This will push the contents of the 'output' directory to the 'gh-pages' branch.
+          publish_branch: main

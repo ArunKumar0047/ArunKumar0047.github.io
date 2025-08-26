@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}{{ article.title }} | {{ SITENAME }}{% endblock %}
+
+{% block content %}
+<section id="article-{{ article.slug }}" class="page-section standalone-page">
+    <div class="container">
+        <article class="full-post">
+            <h2 class="section-title">{{ article.title }}</h2>
+            <p class="post-meta">{{ article.locale_date }}</p>
+            <div class="section-content">
+                {{ article.content }}
+            </div>
+        </article>
+    </div>
+</section>
+{% endblock %}
