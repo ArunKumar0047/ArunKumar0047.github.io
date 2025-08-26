@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {# Loop through all pages except 'contact' and render them in order #}
+    {% for p in pages|sort(attribute='menuindex') %}
+        {% if p.slug != 'contact' %}
+            <section id="{{ p.slug }}" class="page-section">
+                <div class="container">
+                    <h2 class="section-title">{{ p.title }}</h2>
+                    <div class="section-content">
+                        {{ p.content }}
+                    </div>
+                </div>
+            </section>
+        {% endif %}
+    {% endfor %}
+
+    {# Blog Section - Placed after projects and before contact #}
+    <section id="blogs" class="page-section">
+        <div class="container">
+            <h2 class="section-title">Latest Blogs</h2>
+            <div class="blog-list">
+                {% if articles %}
+                    {% for article in articles[:3] %}
+                        <article class="blog-summary">
+                            <h3><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
+                            <p class="post-meta">{{ article.locale_date }}</p>
+                            <div class="post-summary">
+                                {{ article.summary }}
+                            </div>
+                        </article>
+                    {% endfor %}
+                {% else %}
+                    <p>Coming soon...</p>
+                {% endif %}
+            </div>
+            {% if articles|length > 3 %}
+                <div class="show-more-container">
+                    <a href="{{ SITEURL }}/blog.html" class="btn">Show More</a>
+                </div>
+            {% endif %}
+        </div>
+    </section>
+
+    {# Render the contact page at the end #}
+    {% for p in pages %}
+        {% if p.slug == 'contact' %}
+            <section id="{{ p.slug }}" class="page-section">
+                <div class="container">
+                    <h2 class="section-title">{{ p.title }}</h2>
+                    <div class="section-content">
+                        {{ p.content }}
+                    </div>
+                </div>
+            </section>
+        {% endif %}
+    {% endfor %}
+{% endblock %}
