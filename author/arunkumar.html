@@ -1,62 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-        <head>
-                        <meta charset="utf-8" />
-                        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                        <meta name="generator" content="Pelican" />
-                        <title>Arunkumar - Arunkumar</title>
-                        <link rel="stylesheet" href=" https://arunkumar0047.github.io/theme/css/main.css" />
-                                <link href=" https://arunkumar0047.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Arunkumar Atom Feed" />
-        </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arunkumar M - Articles by Arunkumar</title>
+    <link rel="stylesheet" href=" https://arunkumar0047.github.io/theme/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <a href=" https://arunkumar0047.github.io/" class="logo">Arunkumar M</a>
+                <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#blogs">Blogs</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    <li><button id="theme-toggle" class="theme-toggle">Light/Dark</button></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-        <body id="index" class="home">
-                <header id="banner" class="body">
-                        <h1><a href=" https://arunkumar0047.github.io/">Arunkumar</a></h1>
-                        <nav><ul>
-                                                <li><a href=" https://arunkumar0047.github.io/category/review.html">Review</a></li>
-                        </ul></nav>
-                </header><!-- /#banner -->
+    <main>
+    <h2>Articles by Arunkumar</h2>
 
-                <aside id="featured" class="body">
-                    <article>
-                        <h1 class="entry-title"><a href=" https://arunkumar0047.github.io/my-first-review.html">My First Review</a></h1>
-<footer class="post-info">
-        <abbr class="published" title="2025-08-14T10:20:00+02:00">
-                Published: Thu 14 August 2025
-        </abbr>
 
-                <address class="vcard author">
-                        By                                 <a class="url fn" href=" https://arunkumar0047.github.io/author/arunkumar.html">Arunkumar</a>
+        <article>
+            <header> <h2><a href=" https://arunkumar0047.github.io/posts/my-first-review.html" rel="bookmark" title="Permalink to My First Review">My First Review</a></h2> </header>
+            <section><p>Following is a review of my first post  </p></section>
+            <footer>
+                <p>Published: <time datetime="2025-08-14T10:20:00+02:00"> Thu 14 August 2025 </time></p>
+                <address>By
+                        <a href=" https://arunkumar0047.github.io/author/arunkumar.html">Arunkumar</a>
                 </address>
-        <p>In <a href=" https://arunkumar0047.github.io/category/review.html">Review</a>.</p>
-        
-</footer><!-- /.post-info --><p>Following is a review of my first post  </p>                    </article>
-                </aside><!-- /#featured -->
-                <section id="extras" class="body">
-                                <div class="blogroll">
-                                        <h2>links</h2>
-                                        <ul>
-                                                        <li><a href="https://www.linkedin.com/in/arunkumar-mohandas/">LinkedIN</a></li>
-                                                        <li><a href="https://github.com/ArunKumar0047">Github</a></li>
-                                                        <li><a href="https://x.com/MasterofNonee__">Twitter</a></li>
-                                        </ul>
-                                </div><!-- /.blogroll -->
-                                <div class="social">
-                                        <h2>social</h2>
-                                        <ul>
-                                                        <li><a href=" https://arunkumar0047.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+            </footer>
+        </article>
 
-                                        </ul>
-                                </div><!-- /.social -->
-                </section><!-- /#extras -->
 
-                <footer id="contentinfo" class="body">
-                        <address id="about" class="vcard body">
-                                Proudly powered by <a rel="nofollow" href="https://getpelican.com/">Pelican</a>, which takes great advantage of <a rel="nofollow" href="https://www.python.org/">Python</a>.
-                        </address><!-- /#about -->
+    </main>
 
-                        <p>The theme is by <a rel="nofollow" href="https://www.smashingmagazine.com/2009/08/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-                </footer><!-- /#contentinfo -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Arunkumar</p>
+        </div>
+    </footer>
 
-        </body>
+    <script>
+        (function() {
+            const themeToggle = document.getElementById('theme-toggle');
+            const body = document.body;
+
+            // Function to apply the saved theme
+            function applyTheme(theme) {
+                if (theme === 'dark') {
+                    body.classList.remove('light-theme');
+                    body.classList.add('dark-theme');
+                } else {
+                    body.classList.remove('dark-theme');
+                    body.classList.add('light-theme');
+                }
+            }
+
+            // On page load, check for a saved theme in localStorage
+            const savedTheme = localStorage.getItem('theme') || 'light'; // Default to light
+            applyTheme(savedTheme);
+
+            // Add click event listener to the toggle button
+            themeToggle.addEventListener('click', function() {
+                let newTheme = body.classList.contains('light-theme') ? 'dark' : 'light';
+                applyTheme(newTheme);
+                localStorage.setItem('theme', newTheme);
+            });
+        })();
+    </script>
+    <script src=" https://arunkumar0047.github.io/theme/js/main.js"></script>
+</body>
 </html>
