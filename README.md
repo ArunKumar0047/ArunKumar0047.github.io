@@ -2,8 +2,6 @@
 
 A clean, responsive, and easily customizable personal website and blog built with Pelican. This project serves as a template for anyone looking to create their own static site with a professional look and a light/dark theme toggle.
 
-![Live Demo](https://arunkumar0047.github.io/)
-
 ---
 
 ## Table of Contents
